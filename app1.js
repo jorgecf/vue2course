@@ -9,7 +9,8 @@ new Vue({
         rawSubtitle: '<i>Subtitle</i>',
         date: '',
         counter: 0,
-        model1: 'Jorge'
+        model1: 'Jorge',
+        clickedSquare: false
     },
 
     // Callable methods inside this element
@@ -30,6 +31,11 @@ new Vue({
     computed: {
         result2: function () { // depends on this.counter
             return "result is " + this.counter;
+        },
+        cssSquare: function() {
+            return {
+                'red': this.clickedSquare
+            }
         }
     },
 
