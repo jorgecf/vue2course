@@ -43,6 +43,19 @@
         <!-- CSS -->
         <div class="square" @click="clickedSquare = !clickedSquare" :class="cssSquare"></div>
 
+        <div v-if="show">Show1</div>
+        <div v-else>Show2</div>
+        <button @click="show = !show">Switch it!</button>
+
+        <!-- vfor -->
+        <ul><li v-for="(s, idx) in stuff">[{{idx}}] - {{ s.name }}, aged {{ s.age }}</li></ul>
+
+        <ul>
+            <li v-for="s in stuff">
+                <span v-for="(val, key, index2) in s">{{val}} is the {{key}}</span>
+            </li>
+        </ul>
+
     </div>
 
 

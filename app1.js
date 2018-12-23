@@ -10,7 +10,12 @@ new Vue({
         date: '',
         counter: 0,
         model1: 'Jorge',
-        clickedSquare: false
+        clickedSquare: false,
+        show: true,
+        stuff: [
+            {name: "One", age: 33},
+            {name: "Two", age: 44}
+        ]
     },
 
     // Callable methods inside this element
