@@ -13,15 +13,18 @@
 <script>
 
     // Local imports
-    import Header from './Header.vue';
-    import Footer from './Footer.vue';
-    import Servers from './Servers.vue';
+    import Header from './components/Header.vue';
+    import Footer from './components/Footer.vue';
+    import Servers from './components/Servers.vue';
 
     export default {
         components: {
             "app-header": Header,
             "app-footer": Footer,
             "app-servers": Servers
+            // ES6 syntax: 
+            // Servers,
+            // would create a Servers: Servers k-v
         }
     }
 
