@@ -1,5 +1,5 @@
 <template>
-    <div class="row">
+        <div class="row">
             <div class="col-xs-12">
                 <footer>
                     <p>All Servers are managed here</p>
@@ -9,13 +9,8 @@
 </template>
 
 <script>
-export default {
-    
-}
 </script>
 
-<style scoped>
-    div {
-        background-color: red;
-    }
+<style>
+
 </style>
