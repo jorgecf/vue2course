@@ -4,12 +4,13 @@
        <!-- form -->
        <form>
             <div class="col-xs-12 col-sm-8 col-md-6">
-                <label></label>
+                <label>Quote</label>
                 <textarea class="form-control" rows="3" v-model="quote"></textarea>
             </div>
 
              <div class="col-xs-12 col-sm-8 col-md-6">
-                <button class="btn btn-primary" @click.prevent="addQuote"></button>
+                 <!-- we use click.prevent so the form is not sent and the page is not reloaded -->
+                <button class="btn btn-primary" @click.prevent="addQuote">Add a new quote</button>
             </div>
 
        </form>
@@ -26,7 +27,8 @@
         },
         methods: {
             addQuote() {
-
+                this.$emit("newQuote", this.quote);
+                this.quote = "";
             }
         }
     }

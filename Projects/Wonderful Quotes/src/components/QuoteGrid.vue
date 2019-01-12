@@ -2,7 +2,9 @@
     <div class="row">
         
         <!-- slotted component, send quote with a slot -->
-        <app-quote v-for="quote in quotes" :key="quote"> 
+        <!-- click.native responds to clicks in the child component and processes it in the 
+        parent -->
+        <app-quote v-for="(quote, index) in quotes" @click.native="deleteQuote(index)" :key="quote"> 
             {{ quote }}
         </app-quote>
     
@@ -17,7 +19,12 @@
         components: {
             "app-quote": Quote
         },
-        props: ["quotes"]
+        props: ["quotes"], // this isnt two way binding!!
+        methods: {
+            deleteQuote(index) {
+                this.$emit("quoteDeleted", index);
+            }
+        }
     }
 
 </script>
