@@ -16,7 +16,7 @@
             <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
                 <h1>Custom Directives</h1>
 
-                <p>This should be colored!</p>
+                <p v-highlight:background="'red'">This should be colored!</p>
 
             </div>
         </div>
@@ -26,6 +26,27 @@
 
 <script>
     export default {
+        // local directives
+        directives: {
+            "highlight": {
+                bind(el, binding, vnode) {
+
+                    if(binding.modifiers['dark']) {
+                         if(binding.arg == 'background') { // arg
+                            el.style.backgroundColor = "#000000";
+                         }
+                    }
+                    else {
+                        if(binding.arg == 'background') { // arg
+                            el.style.backgroundColor = binding.value; //value
+                        } else {
+                            el.style.color = binding.value;
+                        }
+                    }
+
+                }
+            }
+        }
     }
 </script>
 
