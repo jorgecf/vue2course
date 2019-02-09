@@ -8,9 +8,8 @@
                 <app-header></app-header>
 
                 <!-- where the current route is going to be rendered  -->
-                <router-view>
-                    
-                </router-view>
+                <router-view></router-view>
+                
             </div>
         </div>
     </div>

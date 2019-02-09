@@ -1,3 +1,13 @@
 <template>
-    <h3>Some User Details</h3>
+    <h3>User {{ id }} Details</h3>
 </template>
+
+<script>
+export default {
+    data() {
+        return {
+            id: this.$route.params.id
+        }
+    }
+}
+</script>
