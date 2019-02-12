@@ -1,12 +1,23 @@
 <template>
-    <h3>User {{ id }} Details</h3>
+    <div>
+        <h3>User {{ $route.params.id }} Details</h3>
+        <router-link class="btn btn-primary" tag="button" 
+        :to="link">
+            Edit details
+        </router-link>
+    </div>
 </template>
 
 <script>
 export default {
     data() {
         return {
-            id: this.$route.params.id
+            link: { 
+                name: 'edit',
+                params: { id: this.$route.params.id }, 
+                query: { para: 123 },
+                hash: '#anchor'
+            }
         }
     }
 }
