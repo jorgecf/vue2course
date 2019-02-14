@@ -19,6 +19,11 @@ export default {
                 hash: '#anchor'
             }
         }
+    },
+    // local before
+    beforeRouteEnter(to, from, next) {
+        console.log("local before");
+        next();
     }
 }
 </script>

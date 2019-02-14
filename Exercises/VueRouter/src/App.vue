@@ -5,7 +5,7 @@
                 <h1>Routing</h1>
                 <hr>
 
-                <app-header></app-header>
+                <router-view name="header-top"></router-view>
 
                 <transition name="slide" mode="out-in">
                     <!-- where the current route is going to be rendered  -->
@@ -18,13 +18,7 @@
 </template>
 
 <script>
-
-    import Header from './components/Header.vue'
-
     export default {
-        components: {
-            appHeader: Header
-        }
     }
 </script>
 
