@@ -7,10 +7,21 @@ import Header from './components/Header.vue'
 // import Detail from './components/user/UserDetail.vue'
 // import Edit from './components/user/UserEdit.vue'
 const User = resolve => {
-    require.ensure( ['./components/user/User.vue'], () => {
-        resolve(require('./components/user/User.vue'));
-    })
+    require.ensure(['./components/user/User.vue'], () => { resolve(require('./components/user/User.vue')); })
 };
+
+const Start = resolve => {
+    require.ensure(['./components/user/UserStart.vue'], () => { resolve(require('./components/user/UserStart.vue')); })
+};
+
+const Detail = resolve => {
+    require.ensure(['./components/user/Detail.vue'], () => { resolve(require('./components/user/Detail.vue')); })
+};
+
+const Edit = resolve => {
+    require.ensure(['./components/user/Edit.vue'], () => { resolve(require('./components/user/Edit.vue')); })
+};
+
 
 // es6 export
 export const routes = [ // order marks the priority
